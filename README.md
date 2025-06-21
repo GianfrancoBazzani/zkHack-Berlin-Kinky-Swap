@@ -21,6 +21,18 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 
 ### Aleo Escrow
 
+```rust
+// Program
+kiky_swap_escrow.aleo
+
+//  Maker Functions
+transition escrow_from_public
+transition escrow_from_private
+
+// Taker Functions
+transition withdraw_to_public
+transition withdraw_to_private
+```
 
 ## Notes
 
