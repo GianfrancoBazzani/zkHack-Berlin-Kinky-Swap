@@ -1,4 +1,10 @@
-# Kiky Swap
+# Kiky Swap 🔐
+
+## Getting Started
+
+```bash
+git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berlin-Kinky-Swap
+```
 
 ## Architecture
 
