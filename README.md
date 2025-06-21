@@ -27,6 +27,9 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
    - [Kinky Token Manager](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
    - [Kinky Swap Escrow](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
 
+### Aztec
+   - [Kinky Token](https://aztecexplorer.xyz/address/0x29fe8914d01c5360cb747d02e70a47f0039d0cfbd736b691d7de582bee2f7547)
+
 ## Notes
 
 ### Links
@@ -43,6 +46,9 @@ Aleo:
    - [Leo Wallet SDK](https://docs.leo.app/aleo-wallet-adapter)
    - [Check Transactions](https://docs.explorer.provable.com/docs/api-reference/28l42jqxvwhs7-get-confirmation-status-of-transaction)
 
+Noir:
+   - [Aztec Testnet Info](https://docs.aztec.network/try_testnet)
+   - [Aztec Playground](https://play.aztec.network/latest/)
 ### Commands
 
 Aleo SDK:
