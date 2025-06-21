@@ -1,4 +1,4 @@
-# Kiky Swap 🔐
+# Kinky Swap 🔐
 
 ## Getting Started
 
