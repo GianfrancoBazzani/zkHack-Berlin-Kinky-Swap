@@ -1,5 +1,7 @@
 # Kinky Swap 🔐
 
+![Kinky Swap Banner](./img/kiky-swap-schema.png)
+
 ## Getting Started
 
 ```bash
