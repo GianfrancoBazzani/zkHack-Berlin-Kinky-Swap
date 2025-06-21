@@ -19,11 +19,11 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 
 
 
-### Aleo Escrow
+### Aleo Escrow Program
 
 ```rust
 // Program
-kiky_swap_escrow.aleo
+kiky_swap_escrow_v0.aleo
 
 //  Maker Functions
 transition escrow_from_public
@@ -56,4 +56,4 @@ To test Leo programs locally without network, simply run command `leo run <FUNCT
 To execute a transaction on the network `leo execute <program>/<function> <arguments>  --broadcast`
 To fetch records: `snarkos developer scan --endpoint http://localhost:3030 --private-key <PRIVATE_KEY> --start 0 --network 1`
 
-
+To install an external programs to your program as dependency:  `leo add --path ../token_registry/ --network testnet`
