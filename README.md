@@ -23,7 +23,7 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 
 ```rust
 // Program
-kiky_swap_escrow_v0.aleo
+kinky_swap_escrow_v0.aleo
 
 //  Maker Functions
 transition escrow_from_public
@@ -50,10 +50,11 @@ transition withdraw_to_private
 [https://zlearn.gitbook.io/zlearn](https://zlearn.gitbook.io/zlearn)
 [Leo Core Functions](https://zlearn.gitbook.io/zlearn/introduction-to-leo/3.7-operators#core-functions)
 [Leo Wallet SDK](https://docs.leo.app/aleo-wallet-adapter)
+[Check Transactions](https://docs.explorer.provable.com/docs/api-reference/28l42jqxvwhs7-get-confirmation-status-of-transaction)
 
 #### Commands
 To test Leo programs locally without network, simply run command `leo run <FUNCTION_ID> <FUNCTION_ARGUMENTS>` 
 To execute a transaction on the network `leo execute <program>/<function> <arguments>  --broadcast`
 To fetch records: `snarkos developer scan --endpoint http://localhost:3030 --private-key <PRIVATE_KEY> --start 0 --network 1`
 
-To install an external programs to your program as dependency:  `leo add --local ../token_registry token_registry`
+To install an external programs to your program as dependency:  `leo add --path ../token_registry/ --network testnet`
