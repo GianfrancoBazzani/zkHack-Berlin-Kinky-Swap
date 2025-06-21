@@ -24,30 +24,29 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 
 ### Aleo 
 
-[Kinky Token Manager](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
-[Kinky Swap Escrow](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
+   - [Kinky Token Manager](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
+   - [Kinky Swap Escrow](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
 
 ## Notes
 
-### 1INCH FUSION+
-#### Links 
+### Links
+
 [1INCH FUSION+ | INTENT-BASED ATOMIC CROSS-CHAIN SWAPS](https://1inch.io/assets/1inch-fusion-plus.pdf)
 
-### Aleo
+Aleo:
+   - [Testnet faucet](https://discord.com/channels/913160862670397510/1202322326230937640)
+   - [Leo docs](https://docs.leo-lang.org/leo)
+   - [Leo naming conventions](https://developer.aleo.org/guides/leo/leo_best_practices)
+   - [Aleo Standard programs](https://github.com/demox-labs/aleo-standard-programs/tree/main)
+   - [https://zlearn.gitbook.io/zlearn](https://zlearn.gitbook.io/zlearn)
+   - [Leo Core Functions](https://zlearn.gitbook.io/zlearn/introduction-to-leo/3.7-operators#core-functions)
+   - [Leo Wallet SDK](https://docs.leo.app/aleo-wallet-adapter)
+   - [Check Transactions](https://docs.explorer.provable.com/docs/api-reference/28l42jqxvwhs7-get-confirmation-status-of-transaction)
 
-#### Links
-[Testnet faucet](https://discord.com/channels/913160862670397510/1202322326230937640)
-[Leo docs](https://docs.leo-lang.org/leo)
-[Leo naming conventions](https://developer.aleo.org/guides/leo/leo_best_practices)
-[Aleo Standard programs](https://github.com/demox-labs/aleo-standard-programs/tree/main)
-[https://zlearn.gitbook.io/zlearn](https://zlearn.gitbook.io/zlearn)
-[Leo Core Functions](https://zlearn.gitbook.io/zlearn/introduction-to-leo/3.7-operators#core-functions)
-[Leo Wallet SDK](https://docs.leo.app/aleo-wallet-adapter)
-[Check Transactions](https://docs.explorer.provable.com/docs/api-reference/28l42jqxvwhs7-get-confirmation-status-of-transaction)
+### Commands
 
-#### Commands
-To test Leo programs locally without network, simply run command `leo run <FUNCTION_ID> <FUNCTION_ARGUMENTS>` 
-To execute a transaction on the network `leo execute <program>/<function> <arguments>  --broadcast`
-To fetch records: `snarkos developer scan --endpoint http://localhost:3030 --private-key <PRIVATE_KEY> --start 0 --network 1`
-
-To install an external programs to your program as dependency:  `leo add --path ../token_registry/ --network testnet`
+Aleo SDK:
+   - To test Leo programs locally without network, simply run command `leo run <FUNCTION_ID> <FUNCTION_ARGUMENTS>` 
+   - To execute a transaction on the network `leo execute <program>/<function> <arguments>  --broadcast`
+   - To fetch records: `snarkos developer scan --endpoint http://localhost:3030 --private-key <PRIVATE_KEY> --start 0 --network 1`
+  - To install an external programs to your program as dependency:  `leo add --path ../token_registry/ --network testnet`
