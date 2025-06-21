@@ -9,15 +9,12 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 ## Architecture
 
 ## Swap Phases
-1. The maker generates a secret hash and posts the their intent to make a cross-chain swap. At the same time locks the input amount in the source escrow contract. The tokens will be locked until a deadline time t1.
-
-2. The taker takes the intent. At the same time locks the output amount in the destination escrow contract. The tokens will be locked until a deadline time t2 (t2 < t1).
-
-3. If the maker is ok it will withdraw the output amount from the escrow contract in the destination chain effectively revealing the secret.
-
-4. The taker will have a time t1-t2 to withdraw the input amount on the origin chain safely.
-
-
+1. The maker generates a secret and posts in Kinky Swap the intent to make a cross-chain swap with the hash of the secret.
+2. The taker takes the intent, the maker is notified. 
+3. The maker locks the input amount in the source escrow contract. The tokens will be locked until a deadline time t1.
+5. The taker locks the output amount in the destination escrow contract. The tokens will be locked until a deadline time t2 (t2 < t1).
+6. If the maker is ok it will withdraw the output amount from the escrow contract in the destination chain effectively revealing the secret.
+7. The taker will have a time t1-t2 to withdraw the input amount on the origin chain safely.
 
 ### Aleo Escrow Program
 
