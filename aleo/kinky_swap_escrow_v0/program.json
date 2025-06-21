@@ -1,0 +1,15 @@
+{
+  "program": "kinky_swap_escrow_v0.aleo",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "token_registry.aleo",
+      "location": "network",
+      "network": "testnet",
+      "path": null
+    }
+  ],
+  "dev_dependencies": null
+}
