@@ -7,6 +7,7 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 ```
 
 ## Architecture
+![Architecture Schema](./img/kiky-swap-schema.png)
 
 ## Swap Phases
 1. The maker generates a secret and posts in Kinky Swap the intent to make a cross-chain swap with the hash of the secret.
@@ -16,20 +17,13 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 6. If the maker is ok it will withdraw the output amount from the escrow contract in the destination chain effectively revealing the secret.
 7. The taker will have a time t1-t2 to withdraw the input amount on the origin chain safely.
 
-### Aleo Escrow Program
 
-```rust
-// Program
-kinky_swap_escrow_v0.aleo
+## Deployments
 
-//  Maker Functions
-transition escrow_from_public
-transition escrow_from_private
+### Aleo 
 
-// Taker Functions
-transition withdraw_to_public
-transition withdraw_to_private
-```
+[Kinky Token Manager](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
+[Kinky Swap Escrow](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
 
 ## Notes
 
