@@ -1,6 +1,6 @@
 # Kinky Swap 🔐
 
-![Kinky Swap Banner](./img/kiky-swap-schema.png)
+![Kinky Swap Banner](./img/github-banner.png)
 
 ## Getting Started
 
