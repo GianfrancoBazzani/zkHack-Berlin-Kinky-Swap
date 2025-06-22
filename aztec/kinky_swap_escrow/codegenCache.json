@@ -1,0 +1,10 @@
+{
+  "kinky_swap_escrow-Counter.json": {
+    "contractName": "Counter",
+    "hash": "cf54c486643d574199fb2b1e0d236ff8a565b83c0bf915d42f4f1147a7a19903"
+  },
+  "kinky_swap_escrow-KinkySwapEscrow.json": {
+    "contractName": "KinkySwapEscrow",
+    "hash": "30b658b4f1d810a883119b2c7804c13235d2ba551e11df810a0d76126b5cdbd7"
+  }
+}

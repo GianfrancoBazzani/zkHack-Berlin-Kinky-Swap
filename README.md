@@ -29,6 +29,7 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 
 ### Aztec
    - [Kinky Token](https://aztecexplorer.xyz/address/0x29fe8914d01c5360cb747d02e70a47f0039d0cfbd736b691d7de582bee2f7547)
+   - [Kinky Swap Escrow](https://aztecexplorer.xyz/address/0x1951a69527f1b83ee989c9620cc55b9b38d92f9d300995ff5e15a9bfe2912192#bytecode)
 
 ## Notes
 
@@ -49,6 +50,8 @@ Aleo:
 Noir:
    - [Aztec Testnet Info](https://docs.aztec.network/try_testnet)
    - [Aztec Playground](https://play.aztec.network/latest/)
+   - [Token Tutorial](https://docs.aztec.network/developers/guides/getting_started_on_testnet)
+
 ### Commands
 
 Aleo SDK:
@@ -56,3 +59,7 @@ Aleo SDK:
    - To execute a transaction on the network `leo execute <program>/<function> <arguments>  --broadcast`
    - To fetch records: `snarkos developer scan --endpoint http://localhost:3030 --private-key <PRIVATE_KEY> --start 0 --network 1`
   - To install an external programs to your program as dependency:  `leo add --path ../token_registry/ --network testnet`
+
+Aztec SDK:
+ - To display aztec-wallet aliases: `aztec-wallet get-alias`
+ - To mint KinkyToken: `aztec-wallet send mint_to_private --node-url $NODE_URL --from accounts:my-wallet --payment method=fpc-sponsored,fpc=contracts:sponsoredfpc --contract-address kinky_token  --args accounts:my-wallet accounts:my-wallet 10`
