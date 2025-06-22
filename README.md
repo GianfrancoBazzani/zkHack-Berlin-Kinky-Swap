@@ -9,7 +9,7 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 ```
 
 ## Architecture
-![Architecture Schema](./img/kiky-swap-schema.png)
+![Architecture Schema](./img/kinky-swap-schema.png)
 
 ## Kinky Swap | Poor but sexy non-vanila cross-chain swaps for the tasteful and anonymous.
 
