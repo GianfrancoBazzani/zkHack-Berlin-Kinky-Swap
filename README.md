@@ -11,25 +11,47 @@ git clone --recurse-submodules https://github.com/GianfrancoBazzani/zkHack-Berli
 ## Architecture
 ![Architecture Schema](./img/kiky-swap-schema.png)
 
-## Swap Phases
-1. The maker generates a secret and posts in Kinky Swap the intent to make a cross-chain swap with the hash of the secret.
-2. The taker takes the intent, the maker is notified. 
-3. The maker locks the input amount in the source escrow contract. The tokens will be locked until a deadline time t1.
-5. The taker locks the output amount in the destination escrow contract. The tokens will be locked until a deadline time t2 (t2 < t1).
-6. If the maker is ok it will withdraw the output amount from the escrow contract in the destination chain effectively revealing the secret.
-7. The taker will have a time t1-t2 to withdraw the input amount on the origin chain safely.
+## Kinky Swap | Poor but sexy non-vanila cross-chain swaps for the tasteful and anonymous.
+
+**Problem:**
+Currently, there's no direct interoperability between Aleo and Aztec, two nascent blockchain networks focused on privacy. This lack of a cross-chain bridge or atomic cross-chain swap mechanism prevents users from seamlessly transferring assets or liquidity between these ecosystems.
+
+**Solution**
+Kiky Swap enables atomic, anonymous cross-chain bridges and swaps between Aleo and Aztec. Our platform allows users to trustlessly move any asset from Aleo to Aztec and vice-versa, enhancing comosablity within the nascent privacy-focused blockchain space.
+
+### Trustless, Permissionless Cross-Chain Swaps
+Users can swap tokens between Aleo and Aztec chain without depositing into a centralized bridge or relying on a custodian. All lock-and-release logic lives on-chain in hash timelock escrow contracts, so swaps either complete atomically or not at all.
+
+### Leveraging ZK for Privacy
+Kinky Swap leverages zero-knowledge proofs (ZKPs) inherent in both Aleo and Aztec to facilitate private transactions.
+
+### Architecure
+- **Backend:** A private backend allows makers to post orders with minimal information, enabling takers to consume them.
+- **Frontend:** Allows users to interact with the application through wallet injection.
+- **Aleo Escrow Program:** Symmetric [Leo program](https://github.com/GianfrancoBazzani/zkHack-Berlin-Kinky-Swap/blob/main/aleo/kinky_swap_escrow_v0/src/main.leo) deployed on Aleo [testnet](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo) that allows sending/receiving tokens to/from the Aztec network.
+- **Aztec Escrow Smart Contract:** Symmetric [Noir smart contract](https://github.com/GianfrancoBazzani/zkHack-Berlin-Kinky-Swap/blob/main/aztec/kinky_swap_escrow/src/main.nr) deployed on Aztec [testnet](https://aztecexplorer.xyz/address/0x1951a69527f1b83ee989c9620cc55b9b38d92f9d300995ff5e15a9bfe2912192#bytecode) that allows sending/receiving tokens to/from the Aleo testnet.
+
+### Swap Phases 
+1. The maker generates a secret and posts on Kinky Swap the intent to make a cross-chain swap with the hash of the secret.
+2. The taker takes the intent; the maker is notified.
+3. The maker locks the input amount in the source escrow contract. The tokens will be locked until deadline time t1.
+4. The taker locks the output amount in the destination escrow contract. The tokens will be locked until deadline time t2 (t2 < t1).
+5. If the maker is OK, it will withdraw the output amount from the escrow contract on the destination chain, effectively revealing the secret.
+6. The taker will have time t1-t2 to withdraw the input amount on the source chain safely.
+
+The idea is based on the on-chain logic described in the paper: [1INCH FUSION+ INTENT-BASED ATOMIC CROSS-CHAIN SWAPS](https://1inch.io/assets/1inch-fusion-plus.pdf)
 
 
 ## Deployments
 
 ### Aleo 
 
-   - [Kinky Token Manager](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
-   - [Kinky Swap Escrow](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
+   - [kinky_token.aleo (KNK)](https://testnet.aleoscan.io/program?id=kinky_token.aleo)
+   - [kinky_swap_escrow_v0.aleo](https://testnet.aleoscan.io/program?id=kinky_swap_escrow_v0.aleo)
 
 ### Aztec
-   - [Kinky Token](https://aztecexplorer.xyz/address/0x29fe8914d01c5360cb747d02e70a47f0039d0cfbd736b691d7de582bee2f7547)
-   - [Kinky Swap Escrow](https://aztecexplorer.xyz/address/0x1951a69527f1b83ee989c9620cc55b9b38d92f9d300995ff5e15a9bfe2912192#bytecode)
+   - [Kinky Token (KNK)](https://aztecexplorer.xyz/address/0x29fe8914d01c5360cb747d02e70a47f0039d0cfbd736b691d7de582bee2f7547)
+   - [KinkySwapEscrow](https://aztecexplorer.xyz/address/0x1951a69527f1b83ee989c9620cc55b9b38d92f9d300995ff5e15a9bfe2912192#bytecode)
 
 ## Notes
 
