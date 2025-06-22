@@ -5,15 +5,12 @@ use dep::aztec::macros::aztec;
 pub contract KinkySwapEscrow {
     // docs:end:setup
     // docs:start:imports
-    use aztec::macros::{functions::{initializer, private, public, utility, view}, storage::storage};
-    use aztec::prelude::{AztecAddress, Map, PublicMutable, PrivateMutable};
+    use aztec::macros::{functions::{initializer, private, public}, storage::storage};
+    use aztec::prelude::{AztecAddress, Map, PublicMutable};
     use aztec::protocol_types::{
-        abis::function_selector::FunctionSelector,
-        traits::{FromField, ToField, Deserialize, Packable, Serialize},
+        traits::{Deserialize, Packable, Serialize},
         hash::poseidon2_hash
     };
-    use value_note::{balance_utils, value_note::ValueNote};
-    use std::hash;
     use token::Token;
     use std::meta::derive;
     // docs:end:imports
